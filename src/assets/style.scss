@@ -1,0 +1,7 @@
+@use "./style-components/reset";
+@use "./style-components/variables" as *;
+@use "./style-components/mixins" as *;
+
+* {
+  font-family: $font-family-josefin;
+}
