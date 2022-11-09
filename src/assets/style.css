@@ -80,6 +80,48 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 * {
   font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+  background-image: url("./images/bg-mobile-light.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23.2rem;
+  padding: 3rem 1.5rem;
+}
+
+.logo {
+  display: inline-block;
+  color: hsl(0deg, 0%, 98%);
+  letter-spacing: 5px;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */

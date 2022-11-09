@@ -1,7 +1,38 @@
 @use "./style-components/reset";
 @use "./style-components/variables" as *;
 @use "./style-components/mixins" as *;
+@use "./style-components/todo-list";
 
 * {
   font-family: $font-family-josefin;
+}
+
+body {
+  background-color: $very-light-gray;
+  background-image: url("./images/bg-mobile-light.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#root {
+  @include flex(column, center);
+}
+
+header {
+  @include flex(row, baseline);
+  justify-content: space-between;
+  width: 100%;
+}
+
+.app {
+  @include flex(column, center);
+  width: 23.2rem;
+  padding: 3rem 1.5rem;
+}
+
+.logo {
+  display: inline-block;
+  color: $very-light-gray;
+  letter-spacing: 5px;
+  font-weight: 400;
 }

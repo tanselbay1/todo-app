@@ -1,0 +1,5 @@
+@use "./mixins" as *;
+
+.todo-item {
+  @include flex(row, center);
+}
