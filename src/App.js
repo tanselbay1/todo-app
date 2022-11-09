@@ -1,20 +1,23 @@
-import { useState, useReducer } from "react";
+import { useReducer } from "react";
 import "./assets/style.css";
 import data from "./data/todos.json";
 import { ReactComponent as IconMoon } from "./assets/images/icon-moon.svg";
 import NewItem from "./components/NewItem";
 import TodoList from "./components/TodoList";
 
-function App() {
-  // const [todoData, setData] = useState(data);
-  const [todoData, setData] = useReducer(
-    (todoData, newItem) => [...todoData, newItem],
-    data
-  );
+function reducer(state, item) {
+  switch (item.action) {
+    case "adding":
+      return [...state, item];
+    case "deleting":
+      return state.filter((stateItem) => stateItem.id !== item.id);
+    default:
+      alert(new Error());
+  }
+}
 
-  const addItem = (item) => {
-    setData(item);
-  };
+function App() {
+  const [todoData, setData] = useReducer(reducer, data);
 
   return (
     <div className="app">
@@ -22,9 +25,9 @@ function App() {
         <h1 className="logo">TODO</h1>
         <IconMoon />
       </header>
-      <NewItem onAddItem={addItem} />
+      <NewItem onAddItem={setData} />
 
-      <TodoList todoData={todoData} />
+      <TodoList todoData={todoData} onDelete={setData} />
     </div>
   );
 }

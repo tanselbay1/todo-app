@@ -1,11 +1,15 @@
 import { ReactComponent as Cross } from "../assets/images/icon-cross.svg";
 
-export default function Item({ todo }) {
+export default function Item({ todoItem, onDelete }) {
+  const handleClick = () => {
+    onDelete(todoItem);
+  };
+
   return (
     <div className="todo-item">
       <input type="checkbox" name="" id="" />
-      <li key={todo.id}>{todo.todo}</li>
-      <Cross />
+      <li>{todoItem.todo}</li>
+      <Cross onClick={handleClick} />
     </div>
   );
 }

@@ -1,9 +1,12 @@
+import { v4 as uuid } from "uuid";
+
 const NewItem = ({ onAddItem }) => {
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       onAddItem({
-        id: Math.random(),
+        id: uuid(),
         todo: event.target.value,
+        action: "adding",
       });
       event.target.value = "";
     }
