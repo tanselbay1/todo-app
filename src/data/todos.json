@@ -1,8 +1,8 @@
 [
-  { "id": 1, "todo": "Complete online Javascript course", "clicked": true },
-  { "id": 2, "todo": "Jog around the park 3x", "clicked": false },
-  { "id": 3, "todo": "10 minutes meditation", "clicked": false },
-  { "id": 4, "todo": "Read for 1 hour", "clicked": false },
-  { "id": 5, "todo": "Pick up groceries", "clicked": false },
-  { "id": 6, "todo": "Complete Todo App on Frontend Mentor", "clicked": false }
+  { "id": 1, "todo": "Complete online Javascript course", "checked": true },
+  { "id": 2, "todo": "Jog around the park 3x", "checked": false },
+  { "id": 3, "todo": "10 minutes meditation", "checked": false },
+  { "id": 4, "todo": "Read for 1 hour", "checked": false },
+  { "id": 5, "todo": "Pick up groceries", "checked": false },
+  { "id": 6, "todo": "Complete Todo App on Frontend Mentor", "checked": false }
 ]
