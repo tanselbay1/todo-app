@@ -2,11 +2,15 @@ import Item from "./Item";
 
 const TodoList = ({ todoData, onDelete, onCheckedToggle }) => {
   const handleDelete = (item) => {
-    onDelete({ ...item, action: "deleting" });
+    onDelete(item);
   };
   const handleCheckToggle = (item) => {
-    onCheckedToggle({ ...item, action: "toggleCheck" });
+    onCheckedToggle(item);
   };
+
+  if (todoData.length === 0) {
+    return <h2> Found no items on the list</h2>;
+  }
 
   return (
     <ul className="list">

@@ -16,7 +16,7 @@ export default function Item({ todoItem, onDelete, checked, onCheckedToggle }) {
         defaultChecked={checked}
         onChange={handleCheckToggle}
       />
-      <li>{todoItem.todo}</li>
+      <li className={checked ? "checked" : null}>{todoItem.todo}</li>
       <Cross onClick={handleClick} />
     </div>
   );

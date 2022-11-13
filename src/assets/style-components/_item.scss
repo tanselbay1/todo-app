@@ -1,0 +1,16 @@
+@use "./variables" as *;
+
+.todo-item {
+  border-bottom: 1px solid $very-dark-grayish-blue;
+  background-color: $very-light-gray;
+  padding: 1rem;
+
+  li {
+    color: $very-dark-grayish-blue;
+  }
+
+  li.checked {
+    text-decoration: line-through;
+    color: $dark-grayish-blue-1;
+  }
+}

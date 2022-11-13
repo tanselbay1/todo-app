@@ -80,10 +80,29 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.todos-container {
+  background-color: hsl(0deg, 0%, 98%);
+  border-radius: 5px;
+  padding: 0.1rem;
+}
+
 .todo-item {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.todo-item {
+  border-bottom: 1px solid hsl(235deg, 19%, 35%);
+  background-color: hsl(0deg, 0%, 98%);
+  padding: 1rem;
+}
+.todo-item li {
+  color: hsl(235deg, 19%, 35%);
+}
+.todo-item li.checked {
+  text-decoration: line-through;
+  color: hsl(236deg, 9%, 61%);
 }
 
 * {
@@ -91,7 +110,7 @@ select {
 }
 
 body {
-  background-color: hsl(0deg, 0%, 98%);
+  background-color: hsl(236deg, 33%, 92%);
   background-image: url("./images/bg-mobile-light.jpg");
   background-repeat: no-repeat;
   background-position: top center;

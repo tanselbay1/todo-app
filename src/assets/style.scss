@@ -1,14 +1,16 @@
 @use "./style-components/reset";
 @use "./style-components/variables" as *;
 @use "./style-components/mixins" as *;
+@use "./style-components/todos";
 @use "./style-components/todo-list";
+@use "./style-components/item";
 
 * {
   font-family: $font-family-josefin;
 }
 
 body {
-  background-color: $very-light-gray;
+  background-color: $very-light-grayish-blue;
   background-image: url("./images/bg-mobile-light.jpg");
   background-repeat: no-repeat;
   background-position: top center;

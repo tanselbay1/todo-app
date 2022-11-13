@@ -3,7 +3,7 @@ import "./assets/style.css";
 import data from "./data/todos.json";
 import { ReactComponent as IconMoon } from "./assets/images/icon-moon.svg";
 import NewItem from "./components/NewItem";
-import TodoList from "./components/TodoList";
+import Todos from "./components/Todos";
 
 function App() {
   const [todoData, setData] = useReducer(reducer, data);
@@ -23,7 +23,6 @@ function App() {
             return todoItem;
           }
         });
-
       default:
         alert(new Error());
     }
@@ -37,11 +36,7 @@ function App() {
       </header>
       <NewItem onAddItem={setData} />
 
-      <TodoList
-        todoData={todoData}
-        onDelete={setData}
-        onCheckedToggle={setData}
-      />
+      <Todos todoData={todoData} onDelete={setData} onCheckedToggle={setData} />
     </div>
   );
 }

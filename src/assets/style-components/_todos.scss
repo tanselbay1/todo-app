@@ -1,0 +1,7 @@
+@use "./variables" as *;
+
+.todos-container {
+  background-color: $very-light-gray;
+  border-radius: 5px;
+  padding: 0.1rem;
+}
