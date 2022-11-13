@@ -84,6 +84,7 @@ select {
   background-color: hsl(0deg, 0%, 98%);
   border-radius: 5px;
   padding: 0.1rem;
+  min-width: 22rem;
 }
 
 .todo-item {
@@ -105,8 +106,33 @@ select {
   color: hsl(236deg, 9%, 61%);
 }
 
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(233deg, 11%, 84%);
+  position: relative;
+  padding: 1rem;
+}
+.filter-container .filter-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsl(0deg, 0%, 98%);
+  border-radius: 5px;
+  color: hsl(236deg, 9%, 61%);
+  padding: 1rem 4rem;
+  position: absolute;
+  top: 5rem;
+  transform: translateX(-5%);
+  width: 100%;
+}
+
 * {
   font-family: "Josefin Sans", sans-serif;
+  font-size: 13px;
 }
 
 body {

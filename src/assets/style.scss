@@ -4,9 +4,11 @@
 @use "./style-components/todos";
 @use "./style-components/todo-list";
 @use "./style-components/item";
+@use "./style-components/filter";
 
 * {
   font-family: $font-family-josefin;
+  font-size: 13px;
 }
 
 body {

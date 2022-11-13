@@ -2,7 +2,7 @@ import { useState } from "react";
 import Filter from "./Filter";
 import TodoList from "./TodoList";
 
-const Todos = ({ todoData, onDelete, onCheckedToggle }) => {
+const Todos = ({ todoData, onDelete, onCheckedToggle, onClear }) => {
   const [state, setState] = useState("all");
 
   const handleDelete = (item) => {
@@ -10,6 +10,10 @@ const Todos = ({ todoData, onDelete, onCheckedToggle }) => {
   };
   const handleCheckToggle = (item) => {
     onCheckedToggle({ ...item, action: "toggleCheck" });
+  };
+
+  const handleClear = (item) => {
+    onClear({ ...item, action: "clear" });
   };
 
   const allTodos = todoData.map((todo) => todo);
@@ -36,6 +40,7 @@ const Todos = ({ todoData, onDelete, onCheckedToggle }) => {
           setState(filterText);
         }}
         todoLength={todoData.length}
+        onClear={handleClear}
       />
     </div>
   );

@@ -14,6 +14,8 @@ function App() {
         return [...state, item];
       case "deleting":
         return state.filter((stateItem) => stateItem.id !== item.id);
+      case "clear":
+        return state.filter((stateItem) => !stateItem.checked);
       case "toggleCheck":
         let { id, checked } = item;
         return state.map((todoItem) => {
@@ -36,7 +38,12 @@ function App() {
       </header>
       <NewItem onAddItem={setData} />
 
-      <Todos todoData={todoData} onDelete={setData} onCheckedToggle={setData} />
+      <Todos
+        todoData={todoData}
+        onDelete={setData}
+        onCheckedToggle={setData}
+        onClear={setData}
+      />
     </div>
   );
 }
