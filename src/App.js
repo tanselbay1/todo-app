@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className="app dark">
       <header>
         <h1 className="logo">TODO</h1>
         <IconMoon />

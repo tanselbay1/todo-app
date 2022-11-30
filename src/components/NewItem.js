@@ -23,7 +23,10 @@ const NewItem = ({ onAddItem }) => {
 
   return (
     <div className="new-todo">
-      <input type="checkbox" onChange={handleCheck} checked={checked} />
+      <label className="checkbox-container">
+        <input type="checkbox" onChange={handleCheck} checked={checked} />
+        <span className="checkmark"></span>
+      </label>
       <input
         type="text"
         placeholder="Create a new todo..."

@@ -4,18 +4,13 @@
 @use "./style-components/todos";
 @use "./style-components/todo-list";
 @use "./style-components/item";
+@use "./style-components/newItem";
 @use "./style-components/filter";
+@use "./style-components/colors";
 
 * {
   font-family: $font-family-josefin;
-  font-size: 13px;
-}
-
-body {
-  background-color: $very-light-grayish-blue;
-  background-image: url("./images/bg-mobile-light.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;
+  font-size: 12px;
 }
 
 #root {
@@ -26,17 +21,24 @@ header {
   @include flex(row, baseline);
   justify-content: space-between;
   width: 100%;
+  height: 5rem;
+  margin-bottom: 1rem;
 }
 
 .app {
   @include flex(column, center);
-  width: 23.2rem;
-  padding: 3rem 1.5rem;
+  width: 100%;
+  height: 100vh;
+  padding: 4rem 6%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 17.7rem;
 }
 
 .logo {
   display: inline-block;
   color: $very-light-gray;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
+  font-size: 2.1rem;
   font-weight: 400;
 }

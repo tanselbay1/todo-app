@@ -1,5 +1,4 @@
-@use "./mixins" as *;
-
-.todo-item {
-  @include flex(row, center);
+h2.no-items {
+  margin: 2rem;
+  text-align: center;
 }

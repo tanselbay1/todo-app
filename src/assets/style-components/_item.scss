@@ -1,16 +1,19 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 .todo-item {
-  border-bottom: 1px solid $very-dark-grayish-blue;
-  background-color: $very-light-gray;
-  padding: 1rem;
+  @include checkbox;
+  @include flex(row, flex-start);
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  padding: 1.5rem;
 
   li {
-    color: $very-dark-grayish-blue;
+    max-width: 19rem;
+    font-weight: 700;
   }
 
   li.checked {
     text-decoration: line-through;
-    color: $dark-grayish-blue-1;
   }
 }

@@ -1,0 +1,105 @@
+@use "./variables" as *;
+
+//LIGHT THEME COLORS
+
+.light {
+  background-color: $very-light-grayish-blue;
+  background-image: url("./images/bg-mobile-light.jpg");
+
+  h2.no-items {
+    color: $very-dark-grayish-blue;
+  }
+
+  .checkbox-container {
+    .checkmark {
+      border: 1px solid $light-grayish-blue-1;
+    }
+  }
+
+  .new-todo {
+    background-color: $very-light-gray;
+
+    input[type="text"] {
+      background-color: $very-light-gray;
+    }
+  }
+
+  .todos-container {
+    background-color: $very-light-gray;
+
+    .todo-item {
+      background-color: $very-light-gray;
+      border-color: $light-grayish-blue-1;
+
+      li {
+        color: $very-dark-grayish-blue;
+      }
+
+      li.checked {
+        color: $dark-grayish-blue-1;
+      }
+    }
+  }
+
+  .filter-container {
+    color: $light-grayish-blue-1;
+
+    .filter-actions {
+      background-color: $very-light-gray;
+      color: $dark-grayish-blue-1;
+    }
+  }
+}
+
+//DARK THEME COLORS
+
+.dark {
+  background-color: $very-dark-blue;
+  background-image: url("./images/bg-mobile-dark.jpg");
+
+  h2.no-items {
+    color: $very-light-grayish-blue;
+  }
+
+  .checkbox-container {
+    .checkmark {
+      border: 1px solid $very-dark-grayish-blue;
+    }
+  }
+
+  .new-todo {
+    background-color: $very-dark-desaturated-blue;
+
+    input[type="text"] {
+      background-color: $very-dark-desaturated-blue;
+    }
+  }
+
+  .todos-container {
+    background-color: $very-dark-desaturated-blue;
+    box-shadow: none;
+
+    .todo-item {
+      background-color: $very-dark-desaturated-blue;
+      border-color: $very-dark-grayish-blue-2;
+
+      li {
+        color: $dark-grayish-blue-2;
+      }
+
+      li.checked {
+        color: $very-dark-grayish-blue-2;
+      }
+    }
+  }
+
+  .filter-container {
+    color: $very-dark-grayish-blue-2;
+
+    .filter-actions {
+      background-color: $very-dark-desaturated-blue;
+      color: $very-dark-grayish-blue-2;
+      box-shadow: none;
+    }
+  }
+}

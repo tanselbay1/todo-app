@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @mixin flex($direction, $align) {
   display: flex;
   flex-direction: $direction;
@@ -13,5 +15,52 @@
 @mixin large {
   @media screen and(min-width: 1024px) {
     @content;
+  }
+}
+
+@mixin checkbox {
+  .checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      &::after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 7px;
+        top: 4px;
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    input:checked ~ .checkmark {
+      background-image: $check-background;
+      &::after {
+        display: block;
+      }
+    }
   }
 }

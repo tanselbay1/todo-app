@@ -9,7 +9,7 @@ const TodoList = ({ todoData, onDelete, onCheckedToggle }) => {
   };
 
   if (todoData.length === 0) {
-    return <h2> Found no items on the list</h2>;
+    return <h2 className="no-items"> Found no items on the list!</h2>;
   }
 
   return (

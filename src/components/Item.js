@@ -10,13 +10,16 @@ export default function Item({ todoItem, onDelete, checked, onCheckedToggle }) {
 
   return (
     <div className="todo-item">
-      <input
-        type="checkbox"
-        id="checkbox"
-        defaultChecked={checked}
-        onChange={handleCheckToggle}
-      />
-      <li className={checked ? "checked" : null}>{todoItem.todo}</li>
+      <label className="checkbox-container">
+        <input
+          type="checkbox"
+          id="checkbox"
+          defaultChecked={checked}
+          onChange={handleCheckToggle}
+        />
+        <span className="checkmark"></span>
+        <li className={checked ? "checked" : null}>{todoItem.todo}</li>
+      </label>
       <Cross onClick={handleClick} />
     </div>
   );

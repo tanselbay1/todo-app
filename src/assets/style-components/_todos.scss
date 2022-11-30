@@ -1,8 +1,8 @@
 @use "./variables" as *;
 
 .todos-container {
-  background-color: $very-light-gray;
   border-radius: 5px;
   padding: 0.1rem;
-  min-width: 22rem;
+  width: 100%;
+  box-shadow: 0 15px 15px 3px rgba(187, 187, 187, 0.2);
 }
