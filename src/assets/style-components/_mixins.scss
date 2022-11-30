@@ -6,6 +6,12 @@
   align-items: $align;
 }
 
+@mixin small {
+  @media screen and(min-width: 640px) {
+    @content;
+  }
+}
+
 @mixin medium {
   @media screen and(min-width: 768px) {
     @content;
