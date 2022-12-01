@@ -251,6 +251,11 @@ h2.no-items {
   background-color: hsl(236deg, 33%, 92%);
   background-image: url("./images/bg-mobile-light.jpg");
 }
+@media screen and (min-width: 768px) {
+  .light {
+    background-image: url("./images/bg-desktop-light.jpg");
+  }
+}
 .light h2.no-items {
   color: hsl(235deg, 19%, 35%);
 }
@@ -288,6 +293,11 @@ h2.no-items {
   background-color: hsl(235deg, 21%, 11%);
   background-image: url("./images/bg-mobile-dark.jpg");
 }
+@media screen and (min-width: 768px) {
+  .dark {
+    background-image: url("./images/bg-desktop-dark.jpg");
+  }
+}
 .dark h2.no-items {
   color: hsl(236deg, 33%, 92%);
 }
@@ -321,6 +331,10 @@ h2.no-items {
   background-color: hsl(235deg, 24%, 19%);
   color: hsl(233deg, 14%, 35%);
   box-shadow: none;
+}
+
+.theme-toggle {
+  cursor: pointer;
 }
 
 * {

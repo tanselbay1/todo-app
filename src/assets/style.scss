@@ -7,6 +7,7 @@
 @use "./style-components/newItem";
 @use "./style-components/filter";
 @use "./style-components/colors";
+@use "./style-components/theme-toggle";
 
 * {
   font-family: $font-family-josefin;

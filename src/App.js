@@ -1,12 +1,14 @@
-import { useReducer } from "react";
+import { useReducer, useState, useLayoutEffect, useRef } from "react";
 import "./assets/style.css";
 import data from "./data/todos.json";
-import { ReactComponent as IconMoon } from "./assets/images/icon-moon.svg";
 import NewItem from "./components/NewItem";
 import Todos from "./components/Todos";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
   const [todoData, setData] = useReducer(reducer, data);
+  const [darkTheme, setTheme] = useState(false);
+  const app = useRef(null);
 
   function reducer(state, item) {
     switch (item.action) {
@@ -30,11 +32,25 @@ function App() {
     }
   }
 
+  const handleToggle = () => {
+    setTheme((prevValue) => !prevValue);
+  };
+
+  useLayoutEffect(() => {
+    if (darkTheme) {
+      app.current.classList.add("dark");
+      app.current.classList.remove("light");
+    } else {
+      app.current.classList.add("light");
+      app.current.classList.remove("dark");
+    }
+  }, [darkTheme]);
+
   return (
-    <div className="app dark">
+    <div className="app" ref={app}>
       <header>
         <h1 className="logo">TODO</h1>
-        <IconMoon />
+        <ThemeToggle isDark={darkTheme} setIsDark={handleToggle} />
       </header>
       <NewItem onAddItem={setData} />
 
