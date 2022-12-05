@@ -144,6 +144,14 @@ h2.no-items {
 .todo-item .checkbox-container input:checked ~ .checkmark::after {
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .todo-item img {
+    visibility: hidden;
+  }
+  .todo-item:hover img {
+    visibility: visible;
+  }
+}
 .todo-item li {
   max-width: 23rem;
   font-weight: 700;

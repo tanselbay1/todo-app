@@ -7,6 +7,17 @@
   border-bottom: 1px solid;
   padding: 1.5rem;
 
+  @include medium {
+    img {
+      visibility: hidden;
+    }
+    &:hover {
+      img {
+        visibility: visible;
+      }
+    }
+  }
+
   li {
     max-width: 23rem;
     font-weight: 700;
