@@ -26,6 +26,7 @@
 
     input[type="text"] {
       background-color: $very-light-gray;
+      color: $very-dark-grayish-blue;
     }
   }
 
@@ -56,13 +57,20 @@
       .actions-btn {
         &:checked + .radio-label {
           color: $bright-blue;
-          transition: color 0.4s;
         }
       }
       .radio-label {
+        transition: color 0.4s;
+
         &:hover {
           color: $very-dark-grayish-blue;
         }
+      }
+    }
+    .clear-completed span {
+      transition: color 0.4s;
+      &:hover {
+        color: $very-dark-grayish-blue;
       }
     }
   }
@@ -93,6 +101,7 @@
 
     input[type="text"] {
       background-color: $very-dark-desaturated-blue;
+      color: $dark-grayish-blue-2;
     }
   }
 
@@ -121,6 +130,26 @@
       background-color: $very-dark-desaturated-blue;
       color: $very-dark-grayish-blue-2;
       box-shadow: none;
+
+      .actions-btn {
+        &:checked + .radio-label {
+          color: $bright-blue;
+        }
+      }
+      .radio-label {
+        transition: color 0.4s;
+
+        &:hover {
+          color: $dark-grayish-blue-2;
+        }
+      }
+    }
+    .clear-completed span {
+      transition: color 0.4s;
+
+      &:hover {
+        color: $dark-grayish-blue-2;
+      }
     }
   }
 }

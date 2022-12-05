@@ -54,6 +54,10 @@
     }
   }
 
+  .clear-completed span {
+    cursor: pointer;
+  }
+
   .small-span {
     @include medium {
       font-size: 0.9rem;

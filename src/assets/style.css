@@ -267,6 +267,9 @@ h2.no-items {
     font-size: 1rem;
   }
 }
+.filter-container .clear-completed span {
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   .filter-container .small-span {
     font-size: 0.9rem;
@@ -293,6 +296,7 @@ h2.no-items {
 }
 .light .new-todo input[type=text] {
   background-color: hsl(0deg, 0%, 98%);
+  color: hsl(235deg, 19%, 35%);
 }
 .light .todos-container {
   background-color: hsl(0deg, 0%, 98%);
@@ -316,9 +320,17 @@ h2.no-items {
 }
 .light .filter-container .filter-actions .actions-btn:checked + .radio-label {
   color: hsl(220deg, 98%, 61%);
+}
+.light .filter-container .filter-actions .radio-label {
   transition: color 0.4s;
 }
 .light .filter-container .filter-actions .radio-label:hover {
+  color: hsl(235deg, 19%, 35%);
+}
+.light .filter-container .clear-completed span {
+  transition: color 0.4s;
+}
+.light .filter-container .clear-completed span:hover {
   color: hsl(235deg, 19%, 35%);
 }
 
@@ -342,6 +354,7 @@ h2.no-items {
 }
 .dark .new-todo input[type=text] {
   background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 11%, 52%);
 }
 .dark .todos-container {
   background-color: hsl(235deg, 24%, 19%);
@@ -364,6 +377,21 @@ h2.no-items {
   background-color: hsl(235deg, 24%, 19%);
   color: hsl(233deg, 14%, 35%);
   box-shadow: none;
+}
+.dark .filter-container .filter-actions .actions-btn:checked + .radio-label {
+  color: hsl(220deg, 98%, 61%);
+}
+.dark .filter-container .filter-actions .radio-label {
+  transition: color 0.4s;
+}
+.dark .filter-container .filter-actions .radio-label:hover {
+  color: hsl(234deg, 11%, 52%);
+}
+.dark .filter-container .clear-completed span {
+  transition: color 0.4s;
+}
+.dark .filter-container .clear-completed span:hover {
+  color: hsl(234deg, 11%, 52%);
 }
 
 .theme-toggle {
