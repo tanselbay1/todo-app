@@ -1,3 +1,54 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/58618654/204685653-c42c7ad0-fc1f-4a77-8161-5faa7eda3240.jpg" />
-</p>
+# Frontend Mentor - Todo app solution
+
+This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- Toggle light and dark mode
+
+### Screenshot
+
+![](./screenshot.jpg)
+
+### Links
+
+- Solution URL: [Add solution URL here](https://github.com/tanselbay1/todo-app)
+- Live Site URL: [Add live site URL here](https://visionary-taffy-699c5d.netlify.app)
+
+## My process
+
+### Built with
+
+- SCSS variables, mixins, module
+- React Hooks - useState, useReducer, useEffect, useLayoutEffect
+- Flexbox
+- Responsive layout
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [SCSS](https://sass-lang.com) - For styles
+
+## Author
+
+- Frontend Mentor - [@Tansel Bayraktaroglu](https://www.frontendmentor.io/profile/tanselbay1)
+- LinkedIn - [@Tansel Bayraktaroglu](https://www.linkedin.com/in/tansel-bayraktaroglu-28082a96/)
