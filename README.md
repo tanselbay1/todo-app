@@ -29,12 +29,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/58618654/205618558-18012626-2ef0-4bc1-996c-ede8275abcb7.jpg" />
+</p>
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/58618654/205618724-b8fe83a1-ab5e-4f99-91e6-8612e0e32e9f.jpg" />
+</p>
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/tanselbay1/todo-app)
-- Live Site URL: [Add live site URL here](https://visionary-taffy-699c5d.netlify.app)
+- Solution URL: [Github](https://github.com/tanselbay1/todo-app)
+- Live Site URL: [Netlify](https://visionary-taffy-699c5d.netlify.app)
 
 ## My process
 
