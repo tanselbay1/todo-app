@@ -52,6 +52,18 @@
     .filter-actions {
       background-color: $very-light-gray;
       color: $dark-grayish-blue-1;
+
+      .actions-btn {
+        &:checked + .radio-label {
+          color: $bright-blue;
+          transition: color 0.4s;
+        }
+      }
+      .radio-label {
+        &:hover {
+          color: $very-dark-grayish-blue;
+        }
+      }
     }
   }
 }

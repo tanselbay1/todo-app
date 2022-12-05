@@ -145,7 +145,7 @@ h2.no-items {
   display: block;
 }
 .todo-item li {
-  max-width: 19rem;
+  max-width: 23rem;
   font-weight: 700;
 }
 .todo-item li.checked {
@@ -219,6 +219,19 @@ h2.no-items {
   position: relative;
   padding: 1.4rem;
 }
+@media screen and (min-width: 768px) {
+  .filter-container {
+    padding: 0.3rem 1.5rem;
+  }
+}
+.filter-container div {
+  min-width: 7rem;
+}
+@media screen and (min-width: 768px) {
+  .filter-container div:last-child {
+    text-align: right;
+  }
+}
 .filter-container .filter-actions {
   display: flex;
   flex-direction: row;
@@ -232,19 +245,32 @@ h2.no-items {
   transform: translateX(-4%);
   width: 100%;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 768px) {
   .filter-container .filter-actions {
-    transform: translateX(-3%);
+    box-shadow: none;
+    padding: 0.9rem 1.5rem;
+    position: static;
+    margin-right: 1.4rem;
+    transform: none;
+  }
+}
+.filter-container .filter-actions .actions-btn {
+  display: none;
+}
+.filter-container .filter-actions .radio-label {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .filter-container .filter-actions .radio-label {
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .filter-container .filter-actions {
-    transform: translateX(-2%);
+  .filter-container .small-span {
+    font-size: 0.9rem;
   }
-}
-.filter-container .filter-actions span {
-  font-size: 1.2rem;
-  font-weight: 700;
 }
 
 .light {
@@ -287,6 +313,13 @@ h2.no-items {
 .light .filter-container .filter-actions {
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(236deg, 9%, 61%);
+}
+.light .filter-container .filter-actions .actions-btn:checked + .radio-label {
+  color: hsl(220deg, 98%, 61%);
+  transition: color 0.4s;
+}
+.light .filter-container .filter-actions .radio-label:hover {
+  color: hsl(235deg, 19%, 35%);
 }
 
 .dark {
@@ -336,6 +369,12 @@ h2.no-items {
 .theme-toggle {
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .theme-toggle {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 * {
   font-family: "Josefin Sans", sans-serif;
@@ -348,7 +387,7 @@ h2.no-items {
 }
 @media screen and (min-width: 1024px) {
   * {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 

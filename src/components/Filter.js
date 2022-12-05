@@ -22,6 +22,28 @@ const Filter = ({ onFilter, todoLength, onClear }) => {
     };
   }, []);
 
+  const filterActions = (
+    <div className="filter-actions">
+      <input className="actions-btn" type="radio" name="actions" id="all" />
+      <label htmlFor="all" className="radio-label" onClick={filterList}>
+        All
+      </label>
+      <input className="actions-btn" type="radio" name="actions" id="active" />
+      <label htmlFor="active" className="radio-label" onClick={filterList}>
+        Active
+      </label>
+      <input
+        className="actions-btn"
+        type="radio"
+        name="actions"
+        id="completed"
+      />
+      <label htmlFor="completed" className="radio-label" onClick={filterList}>
+        Completed
+      </label>
+    </div>
+  );
+
   const smallScreen = (
     <div className="filter-container">
       <div className="items-left">
@@ -32,11 +54,7 @@ const Filter = ({ onFilter, todoLength, onClear }) => {
       <div className="clear-completed">
         <span onClick={clearList}>Clear Completed</span>
       </div>
-      <div className="filter-actions">
-        <span onClick={filterList}>All</span>
-        <span onClick={filterList}>Active</span>
-        <span onClick={filterList}>Completed</span>
-      </div>
+      {filterActions}
     </div>
   );
 
@@ -46,17 +64,15 @@ const Filter = ({ onFilter, todoLength, onClear }) => {
   return (
     <div className="filter-container">
       <div className="items-left">
-        <span>
+        <span className="small-span">
           {todoLength} {todoLength <= 1 ? "item" : "items"} left
         </span>
       </div>
-      <div className="filter-actions">
-        <span onClick={filterList}>All</span>
-        <span onClick={filterList}>Active</span>
-        <span onClick={filterList}>Completed</span>
-      </div>
+      {filterActions}
       <div className="clear-completed">
-        <span onClick={clearList}>Clear Completed</span>
+        <span onClick={clearList} className="small-span">
+          Clear Completed
+        </span>
       </div>
     </div>
   );
